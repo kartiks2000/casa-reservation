@@ -1,5 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
+import {set, ref} from 'firebase/database'
+
+import {db} from "../../firebase";
+import {uid} from "uid";
 
 function CreateBooking() {
   const [name, setName] = useState('')
@@ -23,7 +27,12 @@ function CreateBooking() {
       'additional_requirements': additional_requirements,
       'table': table
     }
-    console.log(booking_data)
+    console.log(booking_data);
+    const uuid = uid();
+    set(ref(db, `/${uuid}`), {
+      booking_data,
+      uuid
+    });
   }
 
   return(
