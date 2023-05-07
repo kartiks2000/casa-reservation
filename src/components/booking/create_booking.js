@@ -29,8 +29,8 @@ function CreateBooking() {
     }
     console.log(booking_data);
     const uuid = uid();
-    set(ref(db, `/${uuid}`), {
-      booking_data,
+    set(ref(db, `${booking_data.date}/${uuid}`), {
+      ...booking_data,
       uuid
     });
   }
