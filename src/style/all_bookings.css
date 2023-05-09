@@ -1,0 +1,28 @@
+.filter_box{
+    margin: 1.5rem;
+}
+
+.date_filter{
+    width: 7rem;
+    margin: 1.6rem;
+    margin-left: 2;
+    height: 2rem;
+    border-radius: 10rem;
+    background-color: rgb(213, 209, 203);
+}
+
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter_date_submit_btn{
+    /* margin: .5rem; */
+    /* padding: .3rem; */
+}
+
+.export_btn{
+
+}

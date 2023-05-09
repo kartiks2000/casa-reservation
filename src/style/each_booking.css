@@ -1,0 +1,19 @@
+.bookings_box{
+    
+}
+
+.each_booking_box{
+    border: 3px solid red;
+    margin: 1rem;
+    align-self: center;
+    padding: 2rem;
+    background-color: rgb(181, 185, 188);
+    width: 15rem;
+    text-align: left;
+}
+
+.btn_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
