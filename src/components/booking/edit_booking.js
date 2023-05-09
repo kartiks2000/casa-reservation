@@ -41,6 +41,7 @@ function EditBooking(props) {
             ...booking_data,
             uuid: id
           });
+          props.exit_edit_handler();
           }
           catch (err){
             console.log(err);

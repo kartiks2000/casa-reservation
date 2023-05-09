@@ -5,13 +5,29 @@ import '../../style/each_booking.css';
 
 import EditBooking from './edit_booking';
 
+import {set, ref, remove} from 'firebase/database'
+
+import {db} from "../../firebase";
+
 
 function EachBooking(props) {
 
     const [edit_state, SetEdit_state] = useState(false);
 
+    useEffect(() => {
+
+    },[edit_state]);
+
     const edit_handler = () => {
         SetEdit_state(true);
+    }
+
+    const exit_edit_handler = () => {
+        SetEdit_state(false);
+    }
+
+    const delete_handler = (id, date) => {
+        remove(ref(db, `${date}/${id}`));
     }
 
   return(
@@ -28,11 +44,11 @@ function EachBooking(props) {
                 <h3></h3>
                 <div className='btn_box'>
                     <button onClick={() => edit_handler(props.booking_id)}>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={() => delete_handler(props.booking_id, props.date)}>Delete</button>
                 </div>
             </div>
             : 
-            <EditBooking booking={props}></EditBooking>
+            <EditBooking booking={props} exit_edit_handler={exit_edit_handler}></EditBooking>
 
         }
     </div>
