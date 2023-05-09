@@ -5,7 +5,7 @@ import {set, ref} from 'firebase/database'
 
 import {db} from "../../firebase";
 
-import '../../style/each_booking.css';
+import '../../style/edit_booking.css';
 
 
 function EditBooking(props) {
@@ -51,14 +51,46 @@ function EditBooking(props) {
 
   return(
     <div className='edit_box'>
-        <input type="text" disabled className='edit_field' value={props.booking.booking_id}/>
-        <input className='edit_field' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Name' required/>
-        <input className='edit_field' value={contact_number} onChange={(e) => setContact_number(e.target.value)} type='number' placeholder='Contact Number' required/>
-        <input className='edit_field' value={number_of_guests} onChange={(e) => setNumber_of_guests(e.target.value)} type='number' placeholder='Number of guests' required/>
-        <input className='edit_field' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' required/>
-        <input className='edit_field' value={props.booking.date} type='date' required disabled/>
-        <input className='edit_field' value={time} onChange={(e) => setTime(e.target.value)} type='time' required/>
-        <textarea className='edit_field' onChange={(e) => setAdditional_requirements(e.target.value)} value={additional_requirements}/>
+        <div className='edit_field_box'>
+            <label>Booking ID: </label>
+            <input type="text" disabled className='edit_field' value={props.booking.booking_id}/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Name: </label>
+            <input className='edit_field' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Name' required/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Contact Number: </label>
+            <input className='edit_field' value={contact_number} onChange={(e) => setContact_number(e.target.value)} type='number' placeholder='Contact Number' required/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>No. of guests: </label>
+            <input className='edit_field' value={number_of_guests} onChange={(e) => setNumber_of_guests(e.target.value)} type='number' placeholder='Number of guests' required/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Email: </label>
+            <input className='edit_field' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' required/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Date: </label>
+            <input className='edit_field' value={props.booking.date} type='date' required disabled/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Time: </label>
+            <input className='edit_field' value={time} onChange={(e) => setTime(e.target.value)} type='time' required/>
+        </div>
+        
+        <div className='edit_field_box'>
+            <label>Requirements: </label>
+           <textarea className='edit_field' onChange={(e) => setAdditional_requirements(e.target.value)} value={additional_requirements}/> 
+        </div>
+        
         <div className='form_entry'>
           <label>Table assigned</label>
           <select value={table} onChange={(e) => setTable(e.target.value)}>

@@ -5,6 +5,8 @@ import {set, ref} from 'firebase/database'
 import {db} from "../../firebase";
 import {uid} from "uid";
 
+import '../../style/create_booking.css'
+
 function CreateBooking() {
   const [name, setName] = useState('')
   const [number_of_guests, setNumber_of_guests] = useState(0)
@@ -42,38 +44,38 @@ function CreateBooking() {
   }
 
   return(
-    <div>
+    <div className='form_box'>
       <form onSubmit={handle_submit}>
         <div className='form_entry'>
-          <label>Guest Name</label>
+          <label>Guest Name: </label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Total number of guests</label>
+          <label>No of guests: </label>
           <input type="number" value={number_of_guests} onChange={(e)=> setNumber_of_guests(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Contact Number</label>
+          <label>Contact Number: </label>
           <input type="text" value={contact_number} onChange={(e) => setContact_number(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Email</label>
+          <label>Email: </label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Date</label>
+          <label>Date: </label>
           <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Time</label>
+          <label>Time: </label>
           <input type="time" value={time} onChange={(e) => setTime(e.target.value)} required/>
         </div>
         <div className='form_entry'>
-          <label>Additional Requirements</label>
+          <label>Additional Requirements: </label>
           <textarea placeholder='Please type any additional information...' value={additional_requirements} onChange={(e) => setAdditional_requirements(e.target.value)}/>
         </div>
         <div className='form_entry'>
-          <label>Table assigned</label>
+          <label>Table assigned: </label>
           <select value={table} onChange={(e) => setTable(e.target.value)}>
             <option value="T1">T1</option>
             <option value="T2">T2</option>
@@ -82,7 +84,7 @@ function CreateBooking() {
             <option value="T5">T5</option>
           </select> 
         </div>
-        <button>Create Booking</button>
+        <button className='create_booking_btn'>Create Booking</button>
       </form>
     </div>
   );
