@@ -101,7 +101,7 @@ function EditBooking(props) {
             <option value="T5">T5</option>
           </select> 
         </div>
-        <button onClick={() => update_handler(props.booking.booking_id ,props.booking.date)}>Update</button>
+        <button className='update_btn' onClick={() => update_handler(props.booking.booking_id ,props.booking.date)}>Update</button>
     </div>
   );
 }

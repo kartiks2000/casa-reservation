@@ -1,14 +1,14 @@
 .bookings_box{
-    
+    margin: auto;
 }
 
 .each_booking_box{
-    border: 3px solid red;
+    /* border: 3px solid red; */
     border-radius: 2rem;
     margin: 1rem;
     align-self: center;
     padding: 2rem;
-    background-color: rgb(152, 205, 245);
+    background-color: antiquewhite;
     width: 15rem;
     text-align: left;
 }
