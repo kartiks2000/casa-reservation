@@ -48,31 +48,31 @@ function CreateBooking() {
       <form onSubmit={handle_submit}>
         <div className='form_entry'>
           <label>Guest Name: </label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
+          <input className='input_field' type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>No of guests: </label>
-          <input type="number" value={number_of_guests} onChange={(e)=> setNumber_of_guests(e.target.value)} required/>
+          <input className='input_field' type="number" value={number_of_guests} onChange={(e)=> setNumber_of_guests(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>Contact Number: </label>
-          <input type="text" value={contact_number} onChange={(e) => setContact_number(e.target.value)} required/>
+          <input className='input_field' type="text" value={contact_number} onChange={(e) => setContact_number(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>Email: </label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+          <input className='input_field' type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>Date: </label>
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required/>
+          <input className='input_field' type="date" value={date} onChange={(e) => setDate(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>Time: </label>
-          <input type="time" value={time} onChange={(e) => setTime(e.target.value)} required/>
+          <input className='input_field' type="time" value={time} onChange={(e) => setTime(e.target.value)} required/>
         </div>
         <div className='form_entry'>
           <label>Additional Requirements: </label>
-          <textarea placeholder='Please type any additional information...' value={additional_requirements} onChange={(e) => setAdditional_requirements(e.target.value)}/>
+          <textarea className='input_field_1' placeholder='type...' value={additional_requirements} onChange={(e) => setAdditional_requirements(e.target.value)}/>
         </div>
         <div className='form_entry'>
           <label>Table assigned: </label>

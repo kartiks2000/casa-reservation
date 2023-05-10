@@ -8,8 +8,18 @@
 
 .form_entry{
     margin-top: .6rem;
+    display: flex;
+    justify-content: left;
+    /* width: 60rem; */
 }
 
 .create_booking_btn{
     margin-top: 1rem;
+}
+
+.input_field{
+    /* border-radius: .1rem; */
+    padding: .2rem;
+    margin-left: 1rem;
+    /* align-items: center; */
 }
